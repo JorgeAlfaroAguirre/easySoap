@@ -6,8 +6,19 @@ const service = {
   HelloService: {
     HelloPort: {
       sayHello: function (args) {
-        const name = args.name || "Mundo";
-        return { message: `Hola, ${name}` };
+        const name = args?.name?.$value || "Nombre";
+        const lastname = args?.lastname?.$value || "Apellido";
+        const age = args?.age?.$value || 0;
+        const email = args?.email?.$value || "sincorreo@ejemplo.com";
+        const country = args?.country?.$value || "Pais desconocido";
+
+        return {
+          name,
+          lastname,
+          age,
+          email,
+          country,
+        };
       },
     },
   },

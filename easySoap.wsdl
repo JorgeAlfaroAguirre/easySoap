@@ -8,10 +8,18 @@
 
   <wsdl:message name="sayHelloRequest">
     <wsdl:part name="name" type="xsd:string"/>
+    <wsdl:part name="lastname" type="xsd:string"/>
+    <wsdl:part name="age" type="xsd:int"/>
+    <wsdl:part name="email" type="xsd:string"/>
+    <wsdl:part name="country" type="xsd:string"/>
   </wsdl:message>
 
   <wsdl:message name="sayHelloResponse">
-    <wsdl:part name="message" type="xsd:string"/>
+    <wsdl:part name="name" type="xsd:string"/>
+    <wsdl:part name="lastname" type="xsd:string"/>
+    <wsdl:part name="age" type="xsd:int"/>
+    <wsdl:part name="email" type="xsd:string"/>
+    <wsdl:part name="country" type="xsd:string"/>
   </wsdl:message>
 
   <wsdl:portType name="HelloPortType">
